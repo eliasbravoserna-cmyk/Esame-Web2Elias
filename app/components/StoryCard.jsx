@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 
 function getHostname(url) {
   try {
@@ -133,15 +133,25 @@ function StoryCard({
       <div className="story-card__top">
         <div className="story-card__heading">
           <p className="story-card__eyebrow">#{story.id}</p>
-          <h3 className="story-card__title"></h3>
+          <h3 className="story-card__title" >
+            <Link to = {threadHref}>Link</Link>
+          </h3>
         </div>
         {actions}
       </div>
 
-      <div className="story-card__meta"></div>
+      <div className="story-card__meta">
+        <span className='chip chip--score'>{scoreLabel}</span>
+        <span className='chip chip--comments'>{commentsLabel}</span>
+        <span className='chip chip--time'>{timeLabel}</span>
+        <span className='chip chip--author'>{authorLink}</span>
+      </div>
 
       <p className="story-card__excerpt">{excerpt}</p>
       <div className="story-card__footer">
+        <span>
+          Link alla fonte: {sourceLink}      
+        </span>
         <span className="story-card__footnote">ID {story.id}</span>
       </div>
     </article>
