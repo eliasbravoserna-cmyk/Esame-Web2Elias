@@ -184,11 +184,22 @@ button {
     - deve avare una leggera obmra sfocata e verso il basso con colore arancione.
     - deve avere un colore del bordo arancione
 */
-.nav-link:hover,
+.nav-link:hover{
+    transform: translateY(-3px);
+    color: var(--text);
+    border-color: var(--accent-2);
+    
+}
 .nav-link.active {
+    transform: translateY(-3px);
+    color: var(--text);
+    border-color: var(--accent-2);
 }
 
 .nav-link.active {
+    border-color: orange;
+    box-shadow: 0 5px 12px rgba(255, 157, 0, 0.638);
+
 }
 
 .hero {
