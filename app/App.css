@@ -640,14 +640,18 @@ a:focus-visible {
 
     text-align: left;
     vertical-align: top;
+    padding: 10px;
+    border-bottom: var(--line) solid 2px;
 }
-
 .records-table th {
 
     font-size: 0.82rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     top: 0;
+
+    background-color: rgba(0, 0, 0, 0.612);
+     color: var(--accent-2);
 }
 
 
